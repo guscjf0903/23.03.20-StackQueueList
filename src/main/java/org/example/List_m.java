@@ -18,7 +18,7 @@ public class List_m {
         this.array = new Object[l_size];
     }
 
-    public void resize() { //사이즈가 범위를 넘어서 커지거나 작아지면 조정하는 메서드
+    public void     resize() { //사이즈가 범위를 넘어서 커지거나 작아지면 조정하는 메서드
         int array_size = array.length;
         if (size == array_size) {  // 배열이 전부 꽉차면
             int new_arrsize = array_size * 2;
@@ -35,9 +35,7 @@ public class List_m {
 
     // 추가 메서드.. 끝에추가, 처음에추가, 중간에 추가 3가지로 나뉘어서 만듬
     public void addLast(Object value) { //끝에 추가
-        if (size == array.length) { // 크기확인
-            resize();
-        }
+        resize();
         array[size] = value;
         size++;
     }
@@ -46,13 +44,12 @@ public class List_m {
         if (idx > size || idx < 0) {
             throw new IndexOutOfBoundsException();
         }
-        if (idx == size) {
+        if (idx == array.length) {
             addLast(value);
         } else {
             if (size == array.length) {
                 resize();
             }
-
             for (int i = size; i > idx; i--) { //원하는 인덱스부분에 add
                 array[i] = array[i - 1];
             }
