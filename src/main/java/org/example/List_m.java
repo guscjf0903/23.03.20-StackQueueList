@@ -18,7 +18,7 @@ public class List_m {
         this.array = new Object[l_size];
     }
 
-    public void     resize() { //사이즈가 범위를 넘어서 커지거나 작아지면 조정하는 메서드
+    public void resize() { //사이즈가 범위를 넘어서 커지거나 작아지면 조정하는 메서드
         int array_size = array.length;
         if (size == array_size) {  // 배열이 전부 꽉차면
             int new_arrsize = array_size * 2;
@@ -28,23 +28,22 @@ public class List_m {
         if (size < (array_size / 2)) {
             int new_arrsize = array_size / 2;
             array = Arrays.copyOf(array, Math.max(new_arrsize, DEFAULT_NUM)); //디폴트 10 보단 커야한다.
-            return;
         }
-        return;
     }
 
     // 추가 메서드.. 끝에추가, 처음에추가, 중간에 추가 3가지로 나뉘어서 만듬
     public void addLast(Object value) { //끝에 추가
         resize();
-        array[size] = value;
+        array[array.length - 1] = value; // 맨끝 추가
         size++;
     }
 
     public void add(int idx, Object value) { // 중간에 추가
-        if (idx > size || idx < 0) {
-            throw new IndexOutOfBoundsException();
+        if (idx > array.length || idx < 0) {
+            System.out.println("인덱스 벗어남");
+            return;
         }
-        if (idx == array.length) {
+        if (idx + 1 == array.length) {
             addLast(value);
         } else {
             if (size == array.length) {
@@ -65,8 +64,9 @@ public class List_m {
     //삭제구현 삭제는 맨뒤에 있는 값삭제,특정값삭제, 특정인덱스삭제로 나뉜다
 
     public void remove(int idx) {
-        if (idx >= size || idx < 0) {
-            throw new IndexOutOfBoundsException();
+        if (idx >= array.length || idx < 0) {
+            System.out.println("인덱스 벗어남");
+            return;
         }
         for (int i = idx; i < size - 1; i++) {
             array[i] = array[i + 1];
@@ -94,14 +94,16 @@ public class List_m {
 
     public Object get(int idx) {
         if (idx >= size || idx < 0) {
-            throw new IndexOutOfBoundsException();
+            System.out.println("인덱스 벗어남");
+            return -1;
         }
         return array[idx];
     }
 
     public void set(int idx, Object value) {
         if (idx >= size || idx < 0) {
-            throw new IndexOutOfBoundsException();
+            System.out.println("인덱스 벗어남");
+            return;
         }
         array[idx] = value;
     }

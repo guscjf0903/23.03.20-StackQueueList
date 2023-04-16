@@ -5,7 +5,7 @@ class Stack_m extends List_m {
 
     //private static final int DEFAULT_NUM = 10;
     public Stack_m() {
-        super.array = new Object[DEFAULT_NUM];
+        super();
         super.size = 0;
         this.top = 0;
     }
@@ -16,7 +16,8 @@ class Stack_m extends List_m {
 
     public void pop() {
         if (size <= 0) {
-            throw new IndexOutOfBoundsException();
+            System.out.println("인덱스 벗어남");
+            return;
         }
         array[size - 1] = null;
         size--;
@@ -25,7 +26,8 @@ class Stack_m extends List_m {
 
     public Object peek() {
         if (size <= 0) {
-            throw new IndexOutOfBoundsException();
+            System.out.println("인덱스 벗어남");
+            return -1;
         }
         return array[size - 1];
     }

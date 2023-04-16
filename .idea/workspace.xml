@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11b36491-f583-4761-b7cb-eca65a1c0262" name="Changes" comment="">
+    <list default="true" id="11b36491-f583-4761-b7cb-eca65a1c0262" name="Changes" comment="4.16&#10;queue기능 추가&#10;List_m 클래스 빈 괄호 라인과 return코드에서 커버리지 100%가 되지않음...">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Queue_m.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/List_m.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/List_m.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Stack_m.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Stack_m.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/List_mTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/List_mTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,11 +27,31 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="_230320_StackQueueList" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,7 +90,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/guscj/바탕 화면/Backends/hy",
+    "last_opened_file_path": "C:/Users/guscj/바탕 화면/Backends/Backtend 0403/Lombok_test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,7 +99,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -90,7 +114,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.List_mTest">
+  <component name="RunManager" selected="JUnit.List_mTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="_230320_StackQueueList.main" />
@@ -150,15 +174,51 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="List_mTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_230320_StackQueueList.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.List_mTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="List_mTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_230320_StackQueueList.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.List_mTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.List_mTest" />
+        <item itemvalue="JUnit.List_mTest" />
+        <item itemvalue="JUnit.List_mTest.test" />
         <item itemvalue="Gradle.List_mTest.test" />
+        <item itemvalue="Gradle.List_mTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\guscj\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="11b36491-f583-4761-b7cb-eca65a1c0262" name="Changes" comment="" />
@@ -168,8 +228,24 @@
       <updated>1680786552454</updated>
       <workItem from="1680786553579" duration="5848000" />
       <workItem from="1680835573509" duration="13971000" />
-      <workItem from="1681008905244" duration="687000" />
+      <workItem from="1681008905244" duration="1029000" />
+      <workItem from="1681045590051" duration="21000" />
+      <workItem from="1681123805005" duration="3592000" />
+      <workItem from="1681610532043" duration="988000" />
+      <workItem from="1681611639891" duration="42000" />
+      <workItem from="1681611694754" duration="574000" />
+      <workItem from="1681612306648" duration="25000" />
+      <workItem from="1681612854893" duration="201000" />
+      <workItem from="1681613064348" duration="10151000" />
     </task>
+    <task id="LOCAL-00001" summary="4.9">
+      <created>1681025831690</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681025831690</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,12 +274,21 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="4.9" />
+    <MESSAGE value="4.16&#10;queue기능 추가&#10;List_m 클래스 빈 괄호 라인과 return코드에서 커버리지 100%가 되지않음..." />
+    <option name="LAST_COMMIT_MESSAGE" value="4.16&#10;queue기능 추가&#10;List_m 클래스 빈 괄호 라인과 return코드에서 커버리지 100%가 되지않음..." />
+  </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/_230320_StackQueueList$List_mTest_test.ic" NAME="List_mTest.test Coverage Results" MODIFIED="1680959669107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/_230320_StackQueueList$List_mTest.ic" NAME="List_mTest Coverage Results" MODIFIED="1680961721183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/_230320_StackQueueList$List_mTest_test.ic" NAME="List_mTest.test Coverage Results" MODIFIED="1681623858478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/_230320_StackQueueList$List_mTest.ic" NAME="List_mTest Coverage Results" MODIFIED="1681645317453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.*</FILTER>
+    </SUITE>
   </component>
 </project>
