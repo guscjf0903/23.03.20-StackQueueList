@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class List_m {
     protected static final int DEFAULT_NUM = 10;
-    //private static final Object[] EMPTY_ARR = {};
     int size;
     Object[] array;
+
 
     public List_m() { // 초반에 할당범위가 없을때
         this.size = 0;

@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11b36491-f583-4761-b7cb-eca65a1c0262" name="Changes" comment="4.16&#10;queue기능 추가&#10;List_m 클래스 빈 괄호 라인과 return코드에서 커버리지 100%가 되지않음...">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Queue_m.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="11b36491-f583-4761-b7cb-eca65a1c0262" name="Changes" comment="4.16&#10;queue기능 추가&#10;List_m 클래스 get메서드에서 빈 괄호가 라인 커버리지를 올려주지 않음.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/List_m.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/List_m.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Stack_m.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Stack_m.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/List_mTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/List_mTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/List_mTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +86,8 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/guscj/바탕 화면/Backends/Backtend 0403/Lombok_test",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_opened_file_path": "C:/Users/guscj/바탕 화면/Backends/Intellij/_230320_StackQueueList",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -114,42 +111,13 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.List_mTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="_230320_StackQueueList.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="GenericTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="List_mTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.List_mTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="List_mTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -173,6 +141,21 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
+    </configuration>
+    <configuration name="ListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_230320_StackQueueList.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="List_mTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_230320_StackQueueList.test" />
@@ -207,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ListTest" />
         <item itemvalue="JUnit.List_mTest" />
         <item itemvalue="JUnit.List_mTest.test" />
         <item itemvalue="Gradle.List_mTest.test" />
-        <item itemvalue="Gradle.List_mTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +219,14 @@
       <workItem from="1681611694754" duration="574000" />
       <workItem from="1681612306648" duration="25000" />
       <workItem from="1681612854893" duration="201000" />
-      <workItem from="1681613064348" duration="10151000" />
+      <workItem from="1681613064348" duration="10430000" />
+      <workItem from="1681733537094" duration="1438000" />
+      <workItem from="1681820288939" duration="26000" />
+      <workItem from="1681920614464" duration="808000" />
+      <workItem from="1682433076545" duration="57000" />
+      <workItem from="1682681869462" duration="670000" />
+      <workItem from="1683001197571" duration="1547000" />
+      <workItem from="1683019758786" duration="2531000" />
     </task>
     <task id="LOCAL-00001" summary="4.9">
       <created>1681025831690</created>
@@ -245,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681025831690</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="4.16&#10;queue기능 추가&#10;List_m 클래스 get메서드에서 빈 괄호가 라인 커버리지를 올려주지 않음.">
+      <created>1681645568188</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681645568188</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +274,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="4.9" />
     <MESSAGE value="4.16&#10;queue기능 추가&#10;List_m 클래스 빈 괄호 라인과 return코드에서 커버리지 100%가 되지않음..." />
-    <option name="LAST_COMMIT_MESSAGE" value="4.16&#10;queue기능 추가&#10;List_m 클래스 빈 괄호 라인과 return코드에서 커버리지 100%가 되지않음..." />
+    <MESSAGE value="4.16&#10;queue기능 추가&#10;List_m 클래스 get메서드에서 빈 괄호가 라인 커버리지를 올려주지 않음." />
+    <option name="LAST_COMMIT_MESSAGE" value="4.16&#10;queue기능 추가&#10;List_m 클래스 get메서드에서 빈 괄호가 라인 커버리지를 올려주지 않음." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -285,6 +283,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/_230320_StackQueueList$List_mTest_test.ic" NAME="List_mTest.test Coverage Results" MODIFIED="1681623858478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/_230320_StackQueueList$ListTest.ic" NAME="ListTest Coverage Results" MODIFIED="1681733548736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.example.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/_230320_StackQueueList$List_mTest.ic" NAME="List_mTest Coverage Results" MODIFIED="1681645317453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
