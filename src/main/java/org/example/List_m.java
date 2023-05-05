@@ -2,20 +2,20 @@ package org.example;
 
 import java.util.Arrays;
 
-public class List_m {
+public class List_m<T> {
     protected static final int DEFAULT_NUM = 10;
     int size;
-    Object[] array;
+    T[] array;
 
 
     public List_m() { // 초반에 할당범위가 없을때
         this.size = 0;
-        this.array = new Object[DEFAULT_NUM];
+        this.array = (T[])new Object[DEFAULT_NUM];
     }
 
     public List_m(int l_size) { //원하는 할당범위가 있을때
         this.size = 0;
-        this.array = new Object[l_size];
+        this.array = (T[])new Object[l_size];
     }
 
     public void resize() { //사이즈가 범위를 넘어서 커지거나 작아지면 조정하는 메서드
@@ -32,16 +32,23 @@ public class List_m {
     }
 
     // 추가 메서드.. 끝에추가, 처음에추가, 중간에 추가 3가지로 나뉘어서 만듬
-    public void addLast(Object value) { //끝에 추가
+    public void addLast(T value) { //끝에 추가
         resize();
         array[array.length - 1] = value; // 맨끝 추가
         size++;
     }
 
-    public void add(int idx, Object value) { // 중간에 추가
-        if (idx > array.length || idx < 0) {
-            System.out.println("인덱스 벗어남");
-            return;
+    public void add(T value){
+        if (size == array.length) {
+            resize();
+        }
+        array[size] = value;
+        size++;
+    }
+
+    public void add(int idx, T value) { // 중간에 추가
+        if (idx > array.length || idx < 0){
+            throw new IndexOutOfBoundsException();
         }
         if (idx + 1 == array.length) {
             addLast(value);
@@ -57,16 +64,15 @@ public class List_m {
         }
     }
 
-    public void addFirst(Object value) {// 맨처음에 추가
+    public void addFirst(T value) {// 맨처음에 추가
         add(0, value);
     }
 
     //삭제구현 삭제는 맨뒤에 있는 값삭제,특정값삭제, 특정인덱스삭제로 나뉜다
 
     public void remove(int idx) {
-        if (idx >= array.length || idx < 0) {
-            System.out.println("인덱스 벗어남");
-            return;
+        if (idx > array.length || idx < 0){
+            throw new IndexOutOfBoundsException();
         }
         for (int i = idx; i < size - 1; i++) {
             array[i] = array[i + 1];
@@ -82,7 +88,7 @@ public class List_m {
         }
     }
 
-    public void val_remove(Object value) {
+    public void val_remove(T value) {
         int idx;
         for (int i = 0; i < size; i++) {
             if (array[i] == value) {
@@ -92,23 +98,21 @@ public class List_m {
         }
     }
 
-    public Object get(int idx) {
-        if (idx >= size || idx < 0) {
-            System.out.println("인덱스 벗어남");
-            return -1;
+    public T get(int idx) {
+        if (idx > array.length || idx < 0){
+            throw new IndexOutOfBoundsException();
         }
         return array[idx];
     }
 
-    public void set(int idx, Object value) {
-        if (idx >= size || idx < 0) {
-            System.out.println("인덱스 벗어남");
-            return;
+    public void set(int idx, T value) {
+        if (idx > array.length || idx < 0){
+            throw new IndexOutOfBoundsException();
         }
         array[idx] = value;
     }
 
-    public int indexOf(Object value) {
+    public int indexOf(T value) {
         for (int i = 0; i < size; i++) {
             if (array[i] == value) {
                 return i;
@@ -117,7 +121,7 @@ public class List_m {
         return -1;
     }
 
-    public boolean contains(Object value) {
+    public boolean contains(T value) {
         for (int i = 0; i < size; i++) {
             if (array[i] == value) {
                 return true;
