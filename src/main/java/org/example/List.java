@@ -2,39 +2,39 @@ package org.example;
 
 import java.util.Arrays;
 
-public class List_m<T> {
+public class List<T> {
     protected static final int DEFAULT_NUM = 10;
     int size;
     T[] array;
 
 
-    public List_m() { // 초반에 할당범위가 없을때
+    public List() { // 초반에 할당범위가 없을때
         this.size = 0;
         this.array = (T[])new Object[DEFAULT_NUM];
     }
 
-    public List_m(int l_size) { //원하는 할당범위가 있을때
+    public List(int arrsize) { //원하는 할당범위가 있을때
         this.size = 0;
-        this.array = (T[])new Object[l_size];
+        this.array = (T[])new Object[arrsize];
     }
 
     public void resize() { //사이즈가 범위를 넘어서 커지거나 작아지면 조정하는 메서드
-        int array_size = array.length;
-        if (size == array_size) {  // 배열이 전부 꽉차면
-            int new_arrsize = array_size * 2;
-            array = Arrays.copyOf(array, new_arrsize);
+        int arraysize = array.length;
+        if (size == arraysize) {  // 배열이 전부 꽉차면
+            int newarrsize = arraysize * 2;
+            array = Arrays.copyOf(array, newarrsize);
             return;
         }
-        if (size < (array_size / 2)) {
-            int new_arrsize = array_size / 2;
-            array = Arrays.copyOf(array, Math.max(new_arrsize, DEFAULT_NUM)); //디폴트 10 보단 커야한다.
+        if (size < (arraysize / 2)) {
+            int newarrsize = arraysize / 2;
+            array = Arrays.copyOf(array, Math.max(newarrsize, DEFAULT_NUM)); //디폴트 10 보단 커야한다.
         }
     }
 
     // 추가 메서드.. 끝에추가, 처음에추가, 중간에 추가 3가지로 나뉘어서 만듬
-    public void addLast(T value) { //끝에 추가
+    public void addlast(T value) { //끝에 추가
         resize();
-        array[array.length - 1] = value; // 맨끝 추가
+        array[size] = value; // 맨끝 추가
         size++;
     }
 
@@ -51,7 +51,7 @@ public class List_m<T> {
             throw new IndexOutOfBoundsException();
         }
         if (idx + 1 == array.length) {
-            addLast(value);
+            addlast(value);
         } else {
             if (size == array.length) {
                 resize();
@@ -88,7 +88,7 @@ public class List_m<T> {
         }
     }
 
-    public void val_remove(T value) {
+    public void valremove(T value) {
         int idx;
         for (int i = 0; i < size; i++) {
             if (array[i] == value) {
@@ -134,7 +134,7 @@ public class List_m<T> {
         return size;
     }
 
-    public void show_arr() {
+    public void showarr() {
         for (int i = 0; i < size; i++) {
             System.out.print(array[i] + " ");
         }
