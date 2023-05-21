@@ -47,7 +47,7 @@ public class List<T> {
     }
 
     public void add(int idx, T value) { // 중간에 추가
-        if (idx > array.length || idx < 0){
+        if (idx > size || idx < 0){
             throw new IndexOutOfBoundsException();
         }
         if (idx + 1 == array.length) {
@@ -71,12 +71,16 @@ public class List<T> {
     //삭제구현 삭제는 맨뒤에 있는 값삭제,특정값삭제, 특정인덱스삭제로 나뉜다
 
     public void remove(int idx) {
-        if (idx > array.length || idx < 0){
+        if (idx > size || idx < 0 || size == 0){
             throw new IndexOutOfBoundsException();
         }
-        for (int i = idx; i < size - 1; i++) {
-            array[i] = array[i + 1];
-            array[i + 1] = null;
+        if(size - 1 == idx){
+            array[idx] = null;
+        }else {
+            for (int i = idx; i < size - 1; i++) {
+                array[i] = array[i + 1];
+                array[i + 1] = null;
+            }
         }
         size--;
         resize();
@@ -86,6 +90,7 @@ public class List<T> {
         for (int i = 0; i < size; i++) {
             array[i] = null;
         }
+        size = 0;
     }
 
     public void valremove(T value) {
@@ -99,14 +104,14 @@ public class List<T> {
     }
 
     public T get(int idx) {
-        if (idx > array.length || idx < 0){
+        if (idx > size || idx < 0){
             throw new IndexOutOfBoundsException();
         }
         return array[idx];
     }
 
     public void set(int idx, T value) {
-        if (idx > array.length || idx < 0){
+        if (idx > size || idx < 0 || size == 0){
             throw new IndexOutOfBoundsException();
         }
         array[idx] = value;

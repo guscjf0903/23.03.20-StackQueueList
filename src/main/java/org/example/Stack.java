@@ -3,13 +3,12 @@ package org.example;
 class Stack<T> extends List {
     int top;
 
-    //private static final int DEFAULT_NUM = 10;
     public Stack() {
         super();
         this.top = 0;
     }
     public Stack(int l_size) {
-        super();
+        super(l_size);
         this.top = 0;
     }
 
@@ -24,6 +23,7 @@ class Stack<T> extends List {
         }
         array[top - 1] = null;
         top--;
+        size--;
         super.resize();
     }
 
@@ -34,7 +34,7 @@ class Stack<T> extends List {
         return array[top - 1];
     }
 
-    public void showstack() {
+    public void showStack() {
         super.showarr();
     }
 
